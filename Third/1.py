@@ -1,8 +1,10 @@
 # Step 1: Data Loading
 import pandas as pd
 
-# Load the dataset from CSV file
-data = pd.read_csv('iris.csv')
+# Load the dataset
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
+data = pd.read_csv(url, names=names)
 
 # Step 2: Data Exploration
 print(data.head())
